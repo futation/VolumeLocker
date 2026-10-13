@@ -1,0 +1,18 @@
+# VolumeLocker 运行时依赖 —— 装进项目专用 .venv
+#
+# 安装/重建:  双击 setup_env.bat
+#             (等价于 .venv\Scripts\python.exe -m pip install -r requirements.txt)
+#
+# 版本刻意锁死。这台机器上出现过"同一个脚本被不同解释器启动 -> 一会儿行一会儿不行"，
+# 锁定版本能保证重建出来的环境与已验证过的环境完全一致。
+pycaw==20260927
+comtypes==1.4.17
+psutil==7.2.2
+pystray==0.19.5
+pillow==12.3.0
+six==1.17.0
+
+# 外观:现代扁平主题(路线 B)。纯 Python,唯一依赖 pillow(上面已有)。
+# 装不上也不影响使用:theme.py 会自动退回 clam + 内置调色板("轻量模式",
+# 常驻内存少 ~10MB,观感朴素一些)。用 VOLUMELOCKER_LITE=1 可强制轻量模式。
+ttkbootstrap==2.2.3

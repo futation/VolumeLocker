@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // 用 F5 调试时也强制走 .venv，避免 VS Code 自动挑到 pyenv 的 3.12
+      "name": "VolumeLocker (.venv)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}\\volume_locker.py",
+      "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONUTF8": "1"
+      },
+      "justMyCode": false
+    },
+    {
+      "name": "GUI 冒烟测试 (.venv)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}\\tools\\gui_smoke_test.py",
+      "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONUTF8": "1"
+      },
+      "justMyCode": false
+    }
+  ]
+}

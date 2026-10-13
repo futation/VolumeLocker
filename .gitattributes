@@ -1,0 +1,15 @@
+# 文本:入库统一 LF,检出按平台;bat/ps1 强制 CRLF(Windows 批处理对 LF 敏感)
+* text=auto
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# 二进制:不做任何换行/编码处理
+*.png binary
+*.ico binary
+*.exe binary
+
+# 中文文档与 Python 源码按文本处理
+*.md text
+*.py text
+*.json text
+*.spec text
